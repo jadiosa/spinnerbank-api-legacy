@@ -1,0 +1,29 @@
+{
+  "name": "spinnerbank-api-legacy",
+  "description": "RESTful API for Spinner Bank",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "main": "app.js",
+  "engines": {
+    "node": "4.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jadiosa/spinnerbank-api-legacy"
+  },
+  "author": "Makers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jadiosa/spinnerbank-api-legacy/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "pg": "^4.4.2",
+    "sequelize": "^3.11.0",
+    "pg-hstore": "~2.3.2"
+  }
+}
