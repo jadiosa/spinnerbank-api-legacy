@@ -5,13 +5,8 @@ var models = require('./models');
 var server = new Hapi.Server();
 server.connection({ port : process.env.PORT || 3000 })
 
-server.route({
-  method: 'GET',
-  path: '/api/v1',
-  handler: function(request, reply) {
-    reply({ 'api' : 'hello!' });
-  }
-});
+// Routes
+server.route(require('./lib/routes'));
 
 models.sequelize.sync().then(function() {
   server.start(function() {

@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        Customer.hasMany(models.CustomerProduct, { as: 'products' });
+        Customer.belongsToMany(models.Product, { through: 'CustomerProduct' });
       }
     }
   });
