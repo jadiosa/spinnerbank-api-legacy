@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var ProductCustomer = sequelize.define('ProductCustomer', {
+  var CustomerProduct = sequelize.define('CustomerProduct', {
     balance: DataTypes.DECIMAL(10, 2)
   }, {
     classMethods: {
@@ -9,5 +9,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return ProductCustomer;
+  return CustomerProduct;
 };
