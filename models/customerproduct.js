@@ -4,7 +4,9 @@ module.exports = function(sequelize, DataTypes) {
     balance: DataTypes.DECIMAL(10, 2)
   }, {
     classMethods: {
+
       associate: function(models) {
+        CustomerProduct.hasMany(transactions, {as:'CustomerProduct'})
         // associations can be defined here
       }
     }
