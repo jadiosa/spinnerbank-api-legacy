@@ -6,8 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
 
       associate: function(models) {
-        CustomerProduct.hasMany(transactions, {as:'CustomerProduct'})
-        // associations can be defined here
+        CustomerProduct.hasMany(models.Transaction);
       }
     }
   });
