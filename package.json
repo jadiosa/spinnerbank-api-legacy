@@ -1,0 +1,26 @@
+{
+  "name": "spinnerbank-api-legacy",
+  "version": "1.0.0",
+  "description": "API for the core of spinnerbank",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadiosa/spinnerbank-api-legacy.git"
+  },
+  "author": "Makers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jadiosa/spinnerbank-api-legacy/issues"
+  },
+  "homepage": "https://github.com/jadiosa/spinnerbank-api-legacy#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "kerberos": "0.0.17",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.2.7"
+  }
+}
