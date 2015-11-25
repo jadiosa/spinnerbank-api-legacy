@@ -25,7 +25,7 @@ exports = module.exports = function(app, mongoose){
 			document_type: String,
 			document_number: Number
 		},
-		products:[]
+		products:[{id_product}]
 	});
 
 	mongoose.model('user', userSchema);
