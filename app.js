@@ -10,6 +10,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
 
+//Models
+var Product = require('./models/productSchema')(app, mongoose);
+var User = require('./models/userSchema')(app, mongoose);
+var Transaction = require('./models/transactionSchema')(app, mongoose);
+
+//Controllers
+var ProductsController = require('./controllers/productsController');
+
+//API Routes
+router.route('/users/:userID/products')
+  .get(ProductsController.findAllUserProducts);
+
 // Connection to DB
 var uristring =
 process.env.MONGOLAB_URI ||
@@ -27,6 +39,8 @@ mongoose.connect(uristring, function (err, res) {
 // The http server will listen to an appropriate port, or default to
 // port 5000.
 var port = process.env.PORT || 5000;
+
+app.use('/api/v1', router);
 
 app.listen(port, function() {
   console.log('Node Server Running in the port:'+port);
