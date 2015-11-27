@@ -8,7 +8,7 @@ exports = module.exports = function(app, mongoose){
 			require: 'El nombre es obligatorio',
 			trim:true
 		},
-		product_type: {
+		productType: {
 			type: String,
 			require: 'Ingrese el tipo de producto',
 			trim:true

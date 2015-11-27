@@ -17,9 +17,23 @@ exports = module.exports = function(app, mongoose){
 		balance:{
 			type: Number,
 			trim:true
+		},
+		idUser: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
+    },
+		idProduct: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Product'
+	  },
+	  createdAt: {
+			type: Date,
+			default: Date.now
+		},
+		updatedAt: {
+			type: Date,
+			default: Date.now
 		}
-		id_user: String,
-		id_product: String
 	});
 
 	mongoose.model('Transaction', transactionSchema);
