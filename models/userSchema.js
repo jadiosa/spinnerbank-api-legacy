@@ -8,7 +8,7 @@ exports = module.exports = function(app, mongoose){
 			require: 'El nombre es obligatorio',
 			trim:true
 		},
-		last_name: {
+		lastName: {
 			type: String,
 			require: 'El apellido es obligatorio',
 			trim:true
@@ -33,11 +33,11 @@ exports = module.exports = function(app, mongoose){
 		salt:{
 			type: String
 		},
-		document_number: {
+		documentNumber: {
 			type: Number,
 			require: 'El numero de documento es obligatorio'
 		},
-		document_type: {
+		documentType: {
 			type: String,
 			require: 'El tipo de documento es obligatorio',
 			trim: true
