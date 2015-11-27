@@ -22,6 +22,6 @@ exports = module.exports = function(app, mongoose){
 		id_product: String
 	});
 
-	mongoose.model('transaction', transactionSchema);
+	mongoose.model('Transaction', transactionSchema);
 
 };

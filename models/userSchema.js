@@ -23,15 +23,15 @@ exports = module.exports = function(app, mongoose){
 		},
 		password: {
 			type: String,
-			require: 'Ingrese la contraseña'
+			require: 'Ingrese la contraseña',
 			validate:[
 				function(passwd){
-					return passwd && passwd.length > 6;
+					return passwd && passwd.length >= 6;
 				}, 'Escriba un password mas largo'
 			]
 		},
 		salt:{
-			type:String
+			type: String
 		},
 		document_number: {
 			type: Number,
@@ -39,10 +39,10 @@ exports = module.exports = function(app, mongoose){
 		},
 		document_type: {
 			type: String,
-			require: 'El tipo de documento es obligatorio'
+			require: 'El tipo de documento es obligatorio',
 			trim: true
 		},
-		products:[id_product]
+		products:[{ type : mongoose.Schema.Types.ObjectId, ref: 'Product' }]
 	});
 
 	//Crear un método instancia para hashing una contraseña
@@ -55,7 +55,7 @@ exports = module.exports = function(app, mongoose){
 		return this.password === this.hashPassword(password);
 	};
 
-	mongoose.model('user', userSchema);
+	mongoose.model('User', userSchema);
 
 };
 

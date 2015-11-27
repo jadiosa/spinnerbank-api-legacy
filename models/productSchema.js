@@ -15,6 +15,6 @@ exports = module.exports = function(app, mongoose){
 		}		
 	});
 
-	mongoose.model('product', productSchema);
+	mongoose.model('Product', productSchema);
 
 };
