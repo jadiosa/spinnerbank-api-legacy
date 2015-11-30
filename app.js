@@ -11,8 +11,9 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 
 //Models
-var Product = require('./models/productSchema')(app, mongoose);
+var ServiceUser = require('./models/serviceUserSchema')(app, mongoose);
 var User = require('./models/userSchema')(app, mongoose);
+var Product = require('./models/productSchema')(app, mongoose);
 var Transaction = require('./models/transactionSchema')(app, mongoose);
 
 //Controllers
