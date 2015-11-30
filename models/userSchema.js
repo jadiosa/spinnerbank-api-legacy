@@ -22,7 +22,8 @@ exports = module.exports = function(app, mongoose){
     },
     documentNumber: {
       type: Number,
-      require: 'El numero de documento es obligatorio'
+      require: 'El numero de documento es obligatorio',
+      unique: true
     },
     documentType: {
       type: String,
