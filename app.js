@@ -15,6 +15,7 @@ var ServiceUser = require('./models/serviceUserSchema')(app, mongoose);
 var Customer = require('./models/customerSchema')(app, mongoose);
 var Product = require('./models/productSchema')(app, mongoose);
 var Transaction = require('./models/transactionSchema')(app, mongoose);
+var ProductSolicitude = require('./models/productSolicitudeSchema')(app, mongoose);
 
 //Controllers
 var ProductsController = require('./controllers/productsController');
