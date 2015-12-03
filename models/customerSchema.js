@@ -1,7 +1,7 @@
 exports = module.exports = function(app, mongoose){
   var Schema = mongoose.Schema;
 
-  var userSchema = new Schema({
+  var customerSchema = new Schema({
     name: {
       type: String,
       require: 'El nombre es obligatorio',
@@ -33,6 +33,6 @@ exports = module.exports = function(app, mongoose){
     products:[{ type : mongoose.Schema.Types.ObjectId, ref: 'Product' }]
   });
 
-  mongoose.model('User', userSchema);
+  mongoose.model('Customer', customerSchema);
 
 };

@@ -18,9 +18,9 @@ exports = module.exports = function(app, mongoose){
 			type: Number,
 			trim:true
 		},
-		idUser: {
+		idCustomer: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User'
+      ref: 'Customer'
     },
 		idProduct: {
       type: mongoose.Schema.Types.ObjectId,

@@ -12,7 +12,7 @@ app.use(methodOverride());
 
 //Models
 var ServiceUser = require('./models/serviceUserSchema')(app, mongoose);
-var User = require('./models/userSchema')(app, mongoose);
+var Customer = require('./models/customerSchema')(app, mongoose);
 var Product = require('./models/productSchema')(app, mongoose);
 var Transaction = require('./models/transactionSchema')(app, mongoose);
 
@@ -20,8 +20,8 @@ var Transaction = require('./models/transactionSchema')(app, mongoose);
 var ProductsController = require('./controllers/productsController');
 
 //API Routes
-router.route('/users/:userID/products')
-  .get(ProductsController.findAllUserProducts);
+router.route('/customers/:email/products')
+  .get(ProductsController.findAllCustomerProducts);
 
 // Connection to DB
 var uristring =
