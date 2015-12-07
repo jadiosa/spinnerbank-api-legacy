@@ -20,10 +20,14 @@ var Assessor = require('./models/assessorSchema')(app, mongoose);
 
 //Controllers
 var ProductsController = require('./controllers/productsController');
+var TransactionsController = require('./controllers/transactionsController');
 
 //API Routes
 router.route('/customers/:email/products')
   .get(ProductsController.findAllCustomerProducts);
+
+router.route('/customers/:email/products/:idProduct/transactions')
+  .get(TransactionsController.findAllCustomerProductTransactions);
 
 // Connection to DB
 var uristring =
