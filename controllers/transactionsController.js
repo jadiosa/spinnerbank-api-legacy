@@ -38,10 +38,15 @@ function setCustomerProductTransactions(product, customer, res) {
     if(err) res.status(500).send(err.message);
 
     var customerProductTransactionsJson = {
-      _id:        customer.id,
-      name:       customer.name,
-      lastName:   customer.lastName,
-      cellNumber: customer.cellNumber,
+      _id:            customer.id,
+      name:           customer.name,
+      lastName:       customer.lastName,
+      documentNumber: customer.documentNumber,
+      documentType:   customer.documentType,
+      email:          customer.email,
+      cellNumber:     customer.cellNumber,
+      address:        customer.address,
+      geoAddress:     customer.geoAddress,
       product:    {
                     _id:            product.id,
                     name:           product.name,

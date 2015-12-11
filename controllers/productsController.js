@@ -24,11 +24,16 @@ exports.findAllCustomerProducts = function(req, res) {
               res.status(500).send(err.message);
             } else {
               var customerProductsJson = {
-                _id:        customer.id,
-                name:       customer.name,
-                lastName:   customer.lastName,
-                cellNumber: customer.cellNumber,
-                products:   productsJson
+                _id:            customer.id,
+                name:           customer.name,
+                lastName:       customer.lastName,
+                documentNumber: customer.documentNumber,
+                documentType:   customer.documentType,
+                email:          customer.email,
+                cellNumber:     customer.cellNumber,
+                address:        customer.address,
+                geoAddress:     customer.geoAddress,
+                products:       productsJson
               };
 
               console.log('GET api/v1/customers/' + customer.email + '/products');
