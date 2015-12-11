@@ -30,6 +30,10 @@ exports = module.exports = function(app, mongoose){
       require: 'El tipo de documento es obligatorio',
       trim: true
     },
+    cellNumber: {
+      type: Number,
+      trim: true
+    },
     products:[{ type : mongoose.Schema.Types.ObjectId, ref: 'Product' }]
   });
 
