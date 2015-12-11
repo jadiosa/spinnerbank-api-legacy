@@ -41,6 +41,7 @@ function setCustomerProductTransactions(product, customer, res) {
       _id:        customer.id,
       name:       customer.name,
       lastName:   customer.lastName,
+      cellNumber: customer.cellNumber,
       product:    {
                     _id:            product.id,
                     name:           product.name,

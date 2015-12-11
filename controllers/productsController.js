@@ -27,6 +27,7 @@ exports.findAllCustomerProducts = function(req, res) {
                 _id:        customer.id,
                 name:       customer.name,
                 lastName:   customer.lastName,
+                cellNumber: customer.cellNumber,
                 products:   productsJson
               };
 
