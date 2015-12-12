@@ -31,7 +31,7 @@ exports = module.exports = function(app, mongoose){
       trim: true
     },
     cellNumber: {
-      type: Number,
+      type: String,
       trim: true
     },
     products:[{ type : mongoose.Schema.Types.ObjectId, ref: 'Product' }]

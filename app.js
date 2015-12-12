@@ -21,6 +21,7 @@ var Assessor = require('./models/assessorSchema')(app, mongoose);
 //Controllers
 var ProductsController = require('./controllers/productsController');
 var TransactionsController = require('./controllers/transactionsController');
+var ProductSolicitudeController = require('./controllers/productSolicitudeController');
 
 //API Routes
 router.route('/customers/:email/products')
@@ -28,6 +29,9 @@ router.route('/customers/:email/products')
 
 router.route('/customers/:email/products/:idProduct/transactions')
   .get(TransactionsController.findAllCustomerProductTransactions);
+
+router.route('/solicitudes/:id/changeState')
+  .put(ProductSolicitudeController.changeState);
 
 // Connection to DB
 var uristring =

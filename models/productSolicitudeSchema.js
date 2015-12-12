@@ -10,7 +10,7 @@ exports = module.exports = function(app, mongoose){
     },
     state: {
       type: String,
-      default: 'pendiente', // Pendiente, Aprobado, Rechazado
+      default: 'pendiente', // Pendiente, Aprobada, Rechazada
       require: 'El estado es obligatorio'
     },
     idCustomer: {
@@ -20,6 +20,10 @@ exports = module.exports = function(app, mongoose){
     idProduct: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Product'
+    },
+    idAssessor: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Assessor'
     },
     createdAt: {
       type: Date,
