@@ -34,6 +34,14 @@ exports = module.exports = function(app, mongoose){
       type: String,
       trim: true
     },
+    address: {
+      type: String,
+      trim: true
+    },
+    geoAddress: {
+      type: String,
+      trim: true
+    },
     products:[{ type : mongoose.Schema.Types.ObjectId, ref: 'Product' }]
   });
 
